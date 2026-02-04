@@ -14,8 +14,9 @@ url = st.text_input("Enter YouTube Video URL")
 
 summary_type = st.selectbox(
     "Select Summary Type",
-    ["Business", "Educational", "Bullet Points", "Snarky"]
+    ["Overview", "Educational", "Bullet Points", "Insights", "Snarky"]
 )
+
 
 if "transcript" not in st.session_state:
     st.session_state.transcript = None
