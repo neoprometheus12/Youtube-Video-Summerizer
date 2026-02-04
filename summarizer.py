@@ -1,14 +1,13 @@
-
 from gemini_client import generate
 from utils import chunk_text
-from prompts import SYSTEM_PROMPTS
+from prompts import PROMPTS
 
 def summarize(text, mode):
     chunks = chunk_text(text, max_chars=6000)
-    summaries = []
+    outputs = []
 
     for chunk in chunks:
-        prompt = SYSTEM_PROMPTS[mode].format(text=chunk)
-        summaries.append(generate(prompt))
+        prompt = PROMPTS[mode].format(text=chunk)
+        outputs.append(generate(prompt))
 
-    return "\n\n".join(summaries)
+    return "\n\n".join(outputs)
