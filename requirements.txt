@@ -2,6 +2,6 @@ streamlit
 google-generativeai
 python-dotenv
 youtube-transcript-api
-yt-dlp
+yt-dlp>=2024.01.01
 openai-whisper
 torch
